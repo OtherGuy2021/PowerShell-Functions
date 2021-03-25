@@ -7,9 +7,8 @@
         [Parameter(Mandatory = $false,
                 ValueFromPipelineByPropertyName = $true,
         Position = 0)]
-        $Date = (Get-Date)
+        [DateTime]$Date = (Get-Date)
     )
-    $Date = [DateTime]$Date
     $DaySuffix = switch -regex ($Date.Day.ToString()) {
         '1(1|2|3)$' 
         {
