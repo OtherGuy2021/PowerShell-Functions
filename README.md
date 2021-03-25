@@ -14,4 +14,8 @@ Get-FormattedDate takes any date and returns a readable date in ordinal format. 
 ![Gif of get-FormattedDate in action](https://github.com/kieranwalsh/img/blob/main/get-FormattedDate.gif)
 
 
+[remove-Diacritics](https://github.com/kieranwalsh/PowerShell-Functions/blob/main/remove-Diacritics.ps1)
 
+Unfortunately, in Windows Active Driectory and Office 365, usernames with accents or diacritics can be rejected. This function will return the entered string without its discritics when used in user onboarding scripts.
+
+![Image showing remove-Diacritics string discritics from an entered username](https://github.com/kieranwalsh/img/blob/main/remove-Diacritics.png)
