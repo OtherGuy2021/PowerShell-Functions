@@ -1,5 +1,5 @@
 # PowerShell-Functions
-Here are some small PowerShell functions that I use in multiple scripts.
+PowerShell functions that I use in multiple scripts.
 
 [add-LogEntry](https://github.com/kieranwalsh/PowerShell-Functions/blob/main/add-LogEntry.ps1)
 
@@ -8,6 +8,8 @@ Similar to `Tee-Object`, this function will output data to the screen and a log 
 ![Gif of add-LogEntry in action](https://github.com/kieranwalsh/img/blob/main/add-LogEntry.gif)
 
 [get-FormattedDate](https://github.com/kieranwalsh/PowerShell-Functions/blob/main/get-FormattedDate.ps1)
+
+Get-FormattedDate takes any date and returns a readable date in ordinal format. For example, "Jan 16 1992" returns "Thursday, January 16th, 1992".
 
 ![Gif of get-FormattedDate in action](https://github.com/kieranwalsh/img/blob/main/get-FormattedDate.gif)
 
