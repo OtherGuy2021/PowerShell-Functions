@@ -1,5 +1,5 @@
 # PowerShell-Functions
-Some small functions
+Here are some small PowerShell functions that I use in multiple scripts.
 
 * [get-FormattedDate](https://github.com/kieranwalsh/PowerShell-Functions/blob/main/get-FormattedDate.ps1)
 
