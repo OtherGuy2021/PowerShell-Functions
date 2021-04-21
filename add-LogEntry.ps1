@@ -3,8 +3,9 @@
     [CmdletBinding()]
     Param
     (
+        [Alias('Message')]
         [string]$Output
     )
     $Output
-    "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`t $Output" | Out-File -FilePath $LogFile -Encoding 'utf8' -Append
+    '{0,-23}{1}' -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $Output | Out-File -FilePath $LogFile -Encoding 'utf8' -Append
 }
