@@ -1,5 +1,4 @@
-﻿
-function add-LogEntry
+﻿function add-LogEntry
 {
     [CmdletBinding()]
     Param
@@ -7,21 +6,30 @@ function add-LogEntry
         [Alias('Message')]
         [string]$Output,
         [switch]$Indent,
-        [switch]$IsError
+        [switch]$IsError,
+        [switch]$IsSuccess,
+        [switch]$IsWarning
     )
-
     if($Indent)
     {
-        $Width = 27
+        $Space = 5
     }
     Else
     {
-        $Width = 23
+        $Space = 1
     }
+    $Type = 'INFO'
     if($IsError)
     {
-        $Output = ( -join '**** ', $Output)
+        $Type = '[ERROR]'
+    }if($IsSuccess)
+    {
+        $Type = '[SUCCESS]'
+    }
+    if($IsWarning)
+    {
+        $Type = '[WARNING]'
     }
     $Output
-    "{0,-$Width}{1}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $Output | Out-File -FilePath $LogFile -Encoding 'utf8' -Append
+    "{0,-22}{1,-9}{2,-$Space}{3}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $Type, ' ', $Output | Out-File -FilePath $LogFile -Encoding 'utf8' -Append
 }
