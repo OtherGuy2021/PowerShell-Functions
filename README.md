@@ -1,3 +1,4 @@
+
 # PowerShell-Functions
 PowerShell functions that I use in multiple scripts.
 
@@ -5,7 +6,7 @@ PowerShell functions that I use in multiple scripts.
 
 Similar to `Tee-Object`, this function will output data to the screen and a log file. However, it will timestamp the log file entries.
 
-![MP4 of add-LogEntry in action](https://github.com/kieranwalsh/img/blob/main/add-LogEntry.mp4)
+![MP4 of add-LogEntry in action](https://user-images.githubusercontent.com/623629/116894287-c8f3f580-ac29-11eb-9c0b-23785811c9a7.mp4)
 
 [get-FormattedDate](https://github.com/kieranwalsh/PowerShell-Functions/blob/main/get-FormattedDate.ps1)
 
