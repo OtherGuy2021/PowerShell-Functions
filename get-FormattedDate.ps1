@@ -33,5 +33,5 @@
         }
     }
     '{0}, {1:MMMM} {2}{3}, {4}' -f $Date.DayOfWeek, $Date, $Date.Day, $DaySuffix, $Date.Year
-    # Some test junk here.
+    # Some test junk here ...
 }
