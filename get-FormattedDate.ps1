@@ -5,24 +5,25 @@
     Param
     (
         [Parameter(Mandatory = $false,
-                ValueFromPipelineByPropertyName = $true,
-        Position = 0)]
+            ValueFromPipelineByPropertyName = $true,
+            Position = 0)]
         [DateTime]$Date = (Get-Date)
     )
-    $DaySuffix = switch -regex ($Date.Day.ToString()) {
-        '1(1|2|3)$' 
+    $DaySuffix = switch -regex ($Date.Day.ToString())
+    {
+        '1(1|2|3)$'
         {
             'th'
         }
-        '.?1$'      
+        '.?1$'
         {
             'st'
         }
-        '.?2$'      
+        '.?2$'
         {
             'nd'
         }
-        '.?3$'      
+        '.?3$'
         {
             'rd'
         }
@@ -32,4 +33,5 @@
         }
     }
     '{0}, {1:MMMM} {2}{3}, {4}' -f $Date.DayOfWeek, $Date, $Date.Day, $DaySuffix, $Date.Year
+    # Some test junk here.
 }
